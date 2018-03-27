@@ -1,16 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, IndexRoute, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Front from '../pages/front-page'
-import Nav from '../navigation/'
 
 export default () => {
     return(
-    <Router history={HashRouter}>
+    <Router>
     
-        <Route path='/' component={ Nav } />
-           <IndexRoute component={Front}></IndexRoute>
-           
-
+         <Route path='/' exact component={ Front } /> 
        
     </Router>);
 }
